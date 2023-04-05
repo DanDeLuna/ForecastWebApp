@@ -1,0 +1,21 @@
+nav{
+}
+.bigCard{
+    padding: 25px;
+    background-color: rgb(2, 47, 247);
+    margin-bottom: 0px;
+    text-align: start;
+    color: black;
+    flex: 1 0 75vw;
+    height: 400px;
+}
+.searchBox{
+    padding: 25px;
+    background-color: rgb(2, 47, 247);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: start;
+    color: black;
+    flex: 1 0 75vw;
+    height:fit-content;
+}
