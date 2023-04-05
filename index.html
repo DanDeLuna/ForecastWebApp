@@ -12,28 +12,38 @@
 <body class="bg-secondary">
         <nav class="navbar navbar-light bg-info ">
             <h1 class="navbar-brand mx-5">Friendly Forecast</h1>
-            <h3 class="d-flex justify-content-end"></h3>
+            <h3 id="Tiempo" class="d-flex justify-content-end"></h3>
           </nav>
   <Main>
     <div class="container-md searchBox">
         
         <form class="form-inline d-flex justify-content-end">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn bg-secondary text-warning my-2 my-sm-0" type="submit">Search</button>
+            <input id= "inputSearch"class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="btnSearch" class="btn bg-secondary text-warning my-2 my-sm-0" type="submit">Search</button>
           </form>
-
+          <Div id="localSearch"></Div>
       </div>
+      <!--Big card for current details -->
     <div class="container-fluid bigCard">
         <p>Place holder for weather</p>
+        <h3 id="nombre-City"></h3>
+        <div id="fechaCard0"></div>
+        <img id="img0" src="" >
+        <ul class="lists">
+                <li  id="tem0">Temp: </li>
+                <li  id="win0">Wind: </li>
+                <li id="hum0">Humidity: </li>
+        </ul>
       </div>
-      <!--Card Display-->
+
+      <!--5 Card Display-->
       <div class="container-fluid align-baseline forecastCard">
         <P class="h4 mx-5">5 Day Forecast</P>
         <div class="row">
             <div class="card mx-5" id='wth1' style="width: 15rem;">
                 <img id="img1" src="" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 id="card-date1"></h5>
+                <h5 id="fechaCard1"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" id="tem1">Temp: </li>
@@ -45,7 +55,7 @@
             <div class="card mx-5" id="wth2" style="width: 15rem;">
                 <img id="img2" src="" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 id="card-date2"></h5>
+                <h5 id="fechaCard2"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" id="tem2">Temp: </li>
@@ -57,7 +67,7 @@
             <div class="card mx-5" id="wth3" style="width: 15rem;">
                 <img id="img3" src="" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 id="card-date3"></h5>
+                <h5 id="fechaCard3"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" id="tem3">Temp: </li>
@@ -69,7 +79,7 @@
             <div class="card mx-5" id="wth4" style="width: 15rem;">
                 <img id="img4" src="" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 id="card-date4"></h5>
+                <h5 id="fechaCard4"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item" id="win4">Wind: </li>
@@ -81,7 +91,7 @@
             <div class="card mx-5" id="wth5" style="width: 15rem;">
                 <img id="img5" src="" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 id="card-date5"></h5>
+                <h5 id="fechaCard5"></h5>
                 </div>
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item" id="tem5">Temp: </li>
@@ -93,6 +103,9 @@
         
       </div>
   </Main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js"></script>
+<script>dayjs.extend(window.dayjs_plugin_utc)</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
